@@ -1,6 +1,13 @@
-
+"
+" super basic settings
+"
 set nocompatible
 set encoding=utf-8
+
+"
+" enable pathogen
+"
+execute pathogen#infect()
 
 "
 " colors / theme
@@ -71,3 +78,10 @@ set colorcolumn=81 " highlight border for col 80 with a line at 81
 if has('gui_running')
    set guifont=Source\ Code\ Pro:h11
 endif
+
+"
+" NERDTree
+"
+nnoremap <Leader>n :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR> " closes after file selection
+nnoremap <Leader>N :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR> " stays open
+
