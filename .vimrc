@@ -3,19 +3,20 @@ set nocompatible
 set encoding=utf-8
 
 "
-" syntax highlighting
-"
-filetype plugin on
-syntax enable
-au BufRead,BufNewFile *.md set filetype=markdown " markdown highlighting for .md
-
-"
 " colors / theme
 "
 set t_Co=256 " use 256 colors
 let g:solarized_termcolors=256
+let g:solarized_contrast="high"
+syntax enable
 set background=dark " use the dark...
 colorscheme solarized " ... solarized theme
+
+"
+" language specific settings
+"
+filetype plugin on
+au BufRead,BufNewFile *.md set filetype=markdown " markdown highlighting for .md
 
 "
 " visual decorations
@@ -67,4 +68,6 @@ set wildmenu
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set number " enable line numbering
 set colorcolumn=81 " highlight border for col 80 with a line at 81
-
+if has('gui_running')
+   set guifont=Source\ Code\ Pro:h11
+endif
