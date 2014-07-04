@@ -2,9 +2,12 @@
 set nocompatible
 set encoding=utf-8
 
+"
 " syntax highlighting
+"
 filetype plugin on
 syntax enable
+au BufRead,BufNewFile *.md set filetype=markdown " markdown highlighting for .md
 
 "
 " colors / theme
