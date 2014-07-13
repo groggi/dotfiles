@@ -82,6 +82,29 @@ endif
 "
 " NERDTree
 "
-nnoremap <Leader>n :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle<CR> " closes after file selection
-nnoremap <Leader>N :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle<CR> " stays open
+let NERDTreeShowHidden=1 " show hidden files
+set autochdir " the active directory is always where the active buffer is located
+let NERDTreeChDirMode=2 " make sure the active directory is set correctly
+nnoremap <Leader>n :let NERDTreeQuitOnOpen = 1<bar>NERDTreeToggle .<CR> " closes after file selection
+nnoremap <Leader>N :let NERDTreeQuitOnOpen = 0<bar>NERDTreeToggle .<CR> " stays open
+map <leader>r :NERDTreeFind<cr> " move to current buffer location
+
+"
+" window splits keyboard mappings
+"
+nnoremap <C-J> <C-W><C-J> " move down a split
+nnoremap <C-K> <C-W><C-K> " move up a split
+nnoremap <C-L> <C-W><C-L> " move right a split
+nnoremap <C-H> <C-W><C-H> " move left a split
+nnoremap <C-N> <C-W><C-N> " create horizontal split
+nnoremap <C-V> <C-W><C-V> " create verticle split
+
+"
+" disable navigation keys...
+"
+" ... in escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
