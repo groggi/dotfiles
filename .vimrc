@@ -54,6 +54,14 @@ set tabstop=4
 set softtabstop=4
 set shiftround " round indent to nearest multiple of 4
 set nowrap " no line wrapping
+filetype indent on
+
+"
+" indentation highlighting
+"
+let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
 
 "
 " start scrolling before cursor hits the edge
